@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Development Goals Reflection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #FF6B6B;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --glass-effect: rgba(255, 255, 255, 0.3);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #f4f4f4;
+            --card-bg: rgba(0, 0, 0, 0.6);
+            --glass-effect: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            transition: 0.5s ease-in-out;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(255, 107, 107, 0.8)), url('https://source.unsplash.com/1600x900/?earth,nature') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .toggle-mode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .toggle-mode:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            transition: 0.5s ease-in-out;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        .section img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll Animation */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Reflections on Sustainable Development Goals</h1>
+        <button class="toggle-mode" onclick="toggleDarkMode()">🌙 Toggle Mode</button>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>🌾 Zero Hunger</h2>
+            <img src="images/hunger.jpg" alt="Zero Hunger">
+            <p>Zero Hunger is a crucial global goal that envisions a world where everyone has access to sufficient, nutritious food. Hunger is not just about a lack of food; it is linked to poverty, inequality, and unsustainable food systems. Millions of people, especially in developing countries, suffer from malnutrition despite global food production being enough to feed everyone. Achieving Zero Hunger requires collective action—governments, businesses, and individuals must work together to promote sustainable agriculture, reduce food waste, and support small-scale farmers. Education and innovation also play key roles in ensuring food security for future generations. Ending hunger is not just a moral duty but a necessity for global stability and economic growth. A well-fed world is a healthier, more productive world. By making conscious choices and supporting policies that prioritize food accessibility, we can move closer to a future where no one goes to bed hungry.</p>
+        </div>
+
+        <div class="section">
+            <h2>💰 No Poverty</h2>
+            <img src="images/poverty.jpg" alt="No Poverty">
+            <p>No Poverty is a fundamental goal that aims to eliminate extreme poverty and ensure a dignified life for all. Poverty is not just a lack of money; it limits access to education, healthcare, and opportunities, trapping generations in hardship. Despite economic progress, millions still struggle with hunger, unemployment, and inadequate living conditions. Achieving No Poverty requires global cooperation—governments must create fair economic policies, businesses should promote fair wages, and individuals can support sustainable initiatives. Education, job opportunities, and social protections are key to breaking the cycle of poverty. Additionally, empowering marginalized communities helps create a more just and equitable society. Poverty is not inevitable; it is a challenge that can be overcome with collective effort and commitment. When we invest in people and ensure equal opportunities, we build a more stable, prosperous world where everyone has the chance to thrive. Ending poverty benefits all of humanity.</p>
+        </div>
+
+        <div class="section">
+            <h2>♀️ Gender Equality</h2>
+            <img src="images/gender.jpg" alt="Gender Equality">
+            <p>Gender equality is essential for a just, progressive, and sustainable world. It means ensuring equal rights, opportunities, and respect for all, regardless of gender. Despite progress, many people—especially women and girls—still face discrimination, unequal pay, limited access to education, and gender-based violence. Achieving gender equality requires breaking down societal norms that reinforce inequality and ensuring policies that protect and empower all individuals. Education, economic opportunities, and legal protections are crucial in closing the gender gap. When everyone has an equal chance to succeed, societies become more prosperous, innovative, and peaceful. Gender equality is not just a women's issue—it benefits everyone by fostering inclusion, diversity, and fairness. By challenging stereotypes, supporting equitable policies, and advocating for change, we can create a world where gender does not determine one’s opportunities or rights. True progress happens when all people, regardless of gender, can reach their full potential.</p>
+        </div>
+
+        <div class="section">
+            <h2>📚 Quality Education</h2>
+            <img src="images/educ.jpg" alt="Quality Education">
+            <p>Quality education is the foundation of a brighter future, empowering individuals and transforming societies. Education is more than just learning to read and write—it provides the skills, knowledge, and critical thinking necessary for personal and professional growth. However, millions of children and adults worldwide still lack access to proper education due to poverty, conflict, and inequality. Achieving quality education requires investment in schools, trained teachers, and inclusive learning environments that support every student, regardless of background. Education fosters innovation, reduces social inequalities, and promotes sustainable development. It is a powerful tool to break the cycle of poverty and create opportunities for a better life. As a society, we must prioritize education, advocate for policies that support lifelong learning, and ensure that no one is left behind. When we invest in quality education, we invest in a future where individuals and communities can thrive and contribute to global progress.</p>
+        </div>
+
+        <div class="section">
+            <h2>🏥 Good Health & Well-being</h2>
+            <img src="images/health.jpg" alt="Good Health">
+            <p>Good health and well-being are fundamental to a fulfilling and productive life. Without good health, individuals cannot fully participate in education, work, or social activities. However, millions of people around the world still lack access to quality healthcare, nutritious food, and clean water. Preventable diseases, mental health challenges, and unhealthy lifestyles continue to threaten well-being. Achieving good health requires a holistic approach—ensuring accessible healthcare, promoting mental health awareness, and encouraging healthy habits like exercise and balanced nutrition. Governments, communities, and individuals all have a role to play in creating a healthier society. Investing in healthcare, disease prevention, and well-being not only improves individual lives but also strengthens economies and communities. True well-being goes beyond physical health; it includes mental and emotional wellness as well. By prioritizing good health, we pave the way for a happier, more resilient, and more productive world where everyone has the opportunity to thrive.</p>
+        </div>
+
+        <div class="footer">
+            <p>Learn more about the SDGs at <a href="https://sdgs.un.org/" target="_blank">United Nations SDGs</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        document.addEventListener("scroll", function () {
+            document.querySelectorAll('.section').forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
